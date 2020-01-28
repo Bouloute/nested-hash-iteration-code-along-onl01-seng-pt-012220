@@ -27,6 +27,7 @@ def remove_strawberry_real(contacts)
 end
 
 def remove_strawberry(contacts)
+  pp contacts
   contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete_if {|ice_cream| ice_cream == "strawberry"}
   pp contacts
 end
