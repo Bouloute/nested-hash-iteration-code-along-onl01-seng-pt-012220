@@ -29,4 +29,3 @@ end
 def remove_strawberry_one_line(contacts)
   contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete_if {|ice_cream| ice_cream == "strawberry"}
 end
-
