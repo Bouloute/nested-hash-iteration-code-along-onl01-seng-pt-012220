@@ -14,7 +14,7 @@ require 'pry'
      }
    }
 
-def remove_strawberry(contacts)
+def remove_strawberry_real(contacts)
   contacts.each do |person, contact_details_hash|
     if person == "Freddy Mercury"
       contact_details_hash.each do |attribute, data|
@@ -24,6 +24,11 @@ def remove_strawberry(contacts)
       end
     end
   end
+end
+
+def remove_strawberry(contacts)
+  contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete_if {|ice_cream| ice_cream == "strawberry"}
+  pp contacts
 end
 
 remove_strawberry(contacts)
